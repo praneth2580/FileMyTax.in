@@ -1,0 +1,119 @@
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background-color: var(--primary);
+    color: white;
+    padding: 0 1.5rem;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.top-bar-left,
+.top-bar-center,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-left {
+    flex: 1;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+.top-bar-center {
+    flex: 1;
+    justify-content: center;
+}
+
+.top-bar-center h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.top-bar-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.top-bar-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    padding: 0.25rem 0.5rem;
+}
+
+.topbar-select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+}
+
+.topbar-select option {
+    color: var(--text-main);
+}
+
+.profile-group {
+    gap: 0.5rem;
+}
+
+.profile-icon {
+    opacity: 0.8;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+@media (max-width: 768px) {
+    .top-bar-center h2 {
+        display: none;
+    }
+
+    .top-bar {
+        padding: 0 1rem;
+    }
+
+    .topbar-select {
+        max-width: 130px;
+        text-overflow: ellipsis;
+    }
+}

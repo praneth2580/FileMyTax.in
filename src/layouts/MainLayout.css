@@ -1,0 +1,31 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.layout-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    /* Prevent body scroll, let main scroll */
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .layout-body {
+        flex-direction: column;
+        /* The sidebar will act as a bottom nav */
+    }
+
+    .main-content {
+        padding: 1rem;
+        padding-bottom: 80px;
+        /* Space for bottom nav */
+    }
+}

@@ -1,0 +1,123 @@
+.sidebar-nav {
+    width: 250px;
+    background-color: white;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    background-color: var(--bg-body);
+    color: var(--primary);
+}
+
+.nav-icon {
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.nav-link:hover .nav-icon {
+    color: var(--primary);
+}
+
+.nav-link.active {
+    color: var(--primary);
+    background-color: rgba(30, 58, 138, 0.05);
+}
+
+.nav-link.active .nav-icon {
+    color: var(--primary);
+}
+
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--primary);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Mobile Bottom Navigation */
+@media (max-width: 768px) {
+    .sidebar-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        border-right: none;
+        border-top: 1px solid var(--border);
+        z-index: 40;
+        overflow: visible;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        padding: 0;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        background: white;
+    }
+
+    .nav-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 0.25rem;
+        font-size: 0.65rem;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-link.active::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: 20px;
+        height: 3px;
+        bottom: auto;
+        border-radius: 0 0 4px 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link .nav-label {
+        display: none;
+        /* Hide labels on very small screens, show icons only */
+    }
+}

@@ -1,0 +1,92 @@
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.summary-header h2 {
+    margin-bottom: 0.25rem;
+}
+
+.computation-sheet {
+    display: flex;
+    flex-direction: column;
+}
+
+.comp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    font-size: 0.9375rem;
+}
+
+.comp-row.sub {
+    padding-left: 1.5rem;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.comp-row.deduction .comp-value {
+    color: var(--success);
+}
+
+.comp-label {
+    font-weight: 500;
+}
+
+.comp-value {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.comp-divider {
+    border-top: 1px solid var(--border);
+    margin: 0.5rem 0;
+}
+
+.comp-divider.thick {
+    border-top: 2px solid var(--text-main);
+    margin: 0.75rem 0;
+}
+
+.comp-row.final {
+    padding: 1rem 0;
+}
+
+.comp-row.final .comp-label {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.comp-row.refund .final-value {
+    color: var(--success);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.comp-row.payable .final-value {
+    color: var(--warning);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .summary-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+}
