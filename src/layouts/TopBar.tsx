@@ -17,7 +17,7 @@ const TopBar = () => {
         <header className="top-bar">
             <div className="top-bar-left">
                 <div className="logo">
-                    <span className="logo-icon">📄</span> FileMyTax.in
+                    <img src="/logo.png" width='50px' alt="FileMyTax Logo" className="logo-img" />
                 </div>
             </div>
 
